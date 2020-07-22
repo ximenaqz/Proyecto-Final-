@@ -74,13 +74,16 @@ function Login(props) {
     // </div>
     return (
       <>
-      <p className="bienvenido-logueate">Bienvenido a <strong>Aotech</strong>, por favor, loguéese!</p>
-       <div >
-          <img src="/logoaotech.JPG" alt="Aotech" className="logo-fit-login" />
+      <div className="bienvenido-logeate">  
+      <p className="bienvenido-titulo">Bienvenido al <strong > área de usuarios de Aotech.</strong></p>
+      <p  className="bienvenido-titulo">Por favor introduzca su usuario y contraseña o regístrese.</p>
+       <div ></div>
+          <img src="/logoaotech.JPG" alt="Aotech" className="logo-fit-login img-fluid" />
         </div>
         <div className="caja-login">
           <div className="wrapper fadeInDown">
-            <div id="formContent">
+            <div id="formContent"> 
+             {/* //col-md-4 row align-center flex-column */}
               <input
                  type="email"
                  placeholder="Email"
@@ -97,7 +100,7 @@ function Login(props) {
                 className="fadeIn third"
                
               />
-                <button className="fadeIn fourth" onClick={handleSubmit}>Login</button>  
+               <button className="fadeIn fourth btn btn-primary" onClick={handleSubmit}>Login</button>  
 
               <div id="formFooter">
                 <Link className="underlineHover" href="#">

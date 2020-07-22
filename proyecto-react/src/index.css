@@ -19,12 +19,18 @@ code {
   flex-direction: row;
   justify-content: space-between;
 }
+.caja-tittle img {
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  width: 10%;
+}
 
-.caja-header img {
-  width: 15%;
+/* .caja-header img {
+  
   padding-top: 15px;
   padding-left: 30px;
-}
+} */
 
 .caja-menu {
   display: flex;
@@ -137,7 +143,7 @@ code {
   width: 20%;
   margin-top: 10px;
 }
-.caja-logos img {
+.caja-s img {
   width: 20%;
   padding-bottom: 10px;
 }
@@ -177,21 +183,29 @@ code {
   padding-bottom: 150px;
 }
 
+.formulario {
+height: 250px;
+}
+
 .boton-generarPDF {
   width: 20%;
-  margin-left: 80%;
+  margin-left: 45%;
+  padding-top: 2%;
 }
 
 .grafica-calendar {
+  display:flex;
+  padding-top: 20px;
   padding-left: 5px;
   align-items: center;
-  margin-left: 60px;
+  justify-content: space-evenly;
+  /* margin-left: 135px; */
 }
 
 /*ELEMENTOS*/
 
 h3 {
-  padding-top: 40px;
+  padding-top: 2%;
   text-align: center;
 }
 
@@ -263,7 +277,7 @@ h3 {
 .container-elementos-4 {
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
+  /* width: 50%; */
   padding-top: 20px;
   justify-content: space-evenly;
   align-items: center;
@@ -277,7 +291,9 @@ h3 {
   padding-top: 80px;
   font-size: 20px;
 }
-
+.bienvenido-titulo {
+  text-align: center;
+}
 .caja-login {
   display: flex;
   flex-direction: row;
@@ -285,6 +301,7 @@ h3 {
   padding-top: 40px;
   padding-bottom: 150px;
   height: 550px;
+  margin-left: 61px;
 }
 
 /*REGISTER*/
@@ -332,7 +349,7 @@ h3 {
 }
 
 @media (max-width: 375px) {
-  /* Header */
+  /*Header*/
   .caja-tittle img {
     width: 80%;
     height: 30%;
@@ -362,25 +379,10 @@ h3 {
   }
 
   /*Footer */
-  .cajita-trabaja-nosotros {
-    width: 40%;
-    font-size: 12px;
-    padding-top: 1px;
-    padding-left: 3px;
-    margin-left: 40px;
-  }
-
-  .caja-logos {
+  .container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 60%;
-    padding-top: 1px;
-    padding-right: 3px;
-  }
-
-  .cajita-trabaja-nosotros img {
-    align-content: center;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .col-sm {
@@ -428,8 +430,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    margin-left: 61px;
   }
 
   /*REGISTER*/
@@ -450,34 +451,35 @@ h3 {
     padding-bottom: 40px;
   }
 }
+
+/* carrusel */
 .my-carrousel {
   height: 672px;
   width: 1000px;
   object-fit: contain;
 }
-.logo{
-   width: 50px;
+.logo {
+  /* width: 50px; */
   height: 50px;
-  border-radius: 50%; 
+  margin-left: 10%;
+  /* border-radius: 50%;  */
+  width: 250px;
 }
 
-.logo-fit-login{
+.logo-fit-login {
   height: 200px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;  
+  width: 50%;
   margin-top: 75px;
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
 }
 
-
-
-
-
-
 /*Login Styles*/
-input[type=button], input[type=submit], input[type=reset]  {
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
   background-color: #56baed;
   border: none;
   color: white;
@@ -487,8 +489,8 @@ input[type=button], input[type=submit], input[type=reset]  {
   display: inline-block;
   text-transform: uppercase;
   font-size: 13px;
-  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
+  box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
   margin: 5px 20px 40px 20px;
@@ -499,11 +501,15 @@ input[type=button], input[type=submit], input[type=reset]  {
   transition: all 0.3s ease-in-out;
 }
 
-input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
   background-color: #39ace7;
 }
 
-input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="reset"]:active {
   -moz-transform: scale(0.95);
   -webkit-transform: scale(0.95);
   -o-transform: scale(0.95);
@@ -511,7 +517,7 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
   transform: scale(0.95);
 }
 
-input[type=text] {
+input[type="text"] {
   background-color: #f6f6f6;
   border: none;
   color: #0d0d0d;
@@ -532,16 +538,14 @@ input[type=text] {
   border-radius: 5px 5px 5px 5px;
 }
 
-input[type=text]:focus {
+input[type="text"]:focus {
   background-color: #fff;
   border-bottom: 2px solid #5fbae9;
 }
 
-input[type=text]:placeholder {
+input[type="text"]:placeholder {
   color: #cccccc;
 }
-
-
 
 /* ANIMATIONS */
 
@@ -582,23 +586,44 @@ input[type=text]:placeholder {
 }
 
 /* Simple CSS3 Fade-in Animation */
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 .fadeIn {
-  opacity:0;
-  -webkit-animation:fadeIn ease-in 1;
-  -moz-animation:fadeIn ease-in 1;
-  animation:fadeIn ease-in 1;
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
 
-  -webkit-animation-fill-mode:forwards;
-  -moz-animation-fill-mode:forwards;
-  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 
-  -webkit-animation-duration:1s;
-  -moz-animation-duration:1s;
-  animation-duration:1s;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
 }
 
 .fadeIn.first {
@@ -641,18 +666,23 @@ input[type=text]:placeholder {
   color: #0d0d0d;
 }
 
-.underlineHover:hover:after{
+.underlineHover:hover:after {
   width: 100%;
 }
-
-
 
 /* OTHERS */
 
 *:focus {
-    outline: none;
-} 
+  outline: none;
+}
 
 #icon {
-  width:60%;
+  width: 60%;
+}
+
+
+/* Error 403 */
+
+.error {
+  width: 100%;
 }

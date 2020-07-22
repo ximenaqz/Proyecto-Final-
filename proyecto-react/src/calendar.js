@@ -52,7 +52,7 @@ function Calendar(props) {
       return (
         <>
         <div className="calendario" >  
-          <form onSubmit={onFormSubmit}>
+          <form className="formulario" onSubmit={onFormSubmit}>
             <div className="form-group">
               {/* Datepicker es la eqtiqueta que dibuja el calendario */}
               <DatePicker

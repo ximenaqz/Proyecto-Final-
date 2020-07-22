@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import './App.css';
+import { useHistory } from "react-router-dom";
+
 
 function Registro() {
     let [name, setName] = useState("");
     let [email, setEmail] = useState("");
     let [password, setPassword] = useState("");
     let [mensaje, setMensaje] = useState("");
+    let history = useHistory();
 
 
     //Función Nombre - Componente Registro
@@ -49,17 +52,19 @@ function Registro() {
             .then(function (datos) {
                 setMensaje(datos.mensaje);
                 console.log(mensaje);
+                history.push("/api/Login");
                 window.alert('Usted se ha registrado correctamente.')
             });
 
 
     }
     return (
+        <>
        <div>
 
-            <p>Bienvenido a Aotech, Regístrate!</p>
+            <p className="bienvenido-titulo">Bienvenido a AOTECH. Regístrese con sus datos y una contraseña.</p>
            
-            <input
+            {/* <input
                     type="nombre"
                     name="nombre"
                     placeholder="Nombre de Usuario"
@@ -83,12 +88,52 @@ function Registro() {
                 />
 
                 <button onClick={reqUser}>Register</button>
-                
+                 */}
 
             {/*Form NO NO es recomendable para React.
             Privent default previene el comportamiento por defecto de ese evento*/}
+
+
+
+<div className="caja-login">
+          <div className="wrapper fadeInDown">
+            <div id="formContent"> 
+             {/* //col-md-4 row align-center flex-column */}
+             <input
+                 type="texta"
+                placeholder="Nombre"
+                value={name}
+                onChange={reqName}
+                className="fadeIn second"
+               
+              />
+              <input
+                 type="email"
+                 placeholder="Email"
+                 value={email}
+                 onChange={reqEmail}
+                className="fadeIn second"
+               
+              />
+              <input
+                 type="password"
+                placeholder="Password"
+                value={password}
+                onChange={reqPassword}
+                className="fadeIn third"
+               
+              />
+               <button className="fadeIn fourth btn btn-primary" onClick={reqUser}>Login</button>  
+
+             
+              <p> {mensaje}</p>
+            </div>
+          </div>
+        </div>
+
             
      </div>
+     </>
      
     )
 }

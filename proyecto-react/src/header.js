@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 function Header(props) {
@@ -57,10 +57,36 @@ function Header(props) {
   //   }
   return (
     <>
-      <Navbar bg="primary" variant="dark">
-        <div className="caja-tittle">
-          <img src="/logoaotech.JPG" alt="Aotech" className="logo" />
+      <Navbar  expand="lg">
+        <Navbar.Brand href="#home" className='col-3'>
+          <img src="/logoaotech.JPG" alt="Aotech" className="logo img-fluid" />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav" className='offset-7 col-1'>
+          <Nav className="mr-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            {!props.isLoggedIn ? (
+            <>
+              <Nav.Link href="/api/Login">Login</Nav.Link>
+              <Nav.Link href="/api/register">Register </Nav.Link>
+            </>
+          ) : (
+
+            <>
+              <Nav.Link href="/api/Calendar">Datos</Nav.Link>
+              <Nav.Link>
+                <button className="nav-link btn btn-link p-0" onClick={logout}>Logout</button>
+              </Nav.Link>
+            </>
+          )}
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+      {/* <Navbar bg="primary" variant="dark">
+       <div className="caja-tittle">
+          <img src="/logoaotech.JPG" alt="Aotech" className="logo img-fluid " />
         </div>
+        
         <Nav className="mr-auto">
           <Nav.Link href="/">Home</Nav.Link>
           {!props.isLoggedIn ? (
@@ -69,6 +95,7 @@ function Header(props) {
               <Nav.Link href="/api/register">Register </Nav.Link>
             </>
           ) : (
+
             <div>
               <Nav.Link href="/api/Calendar">Datos</Nav.Link>
               <Nav.Link>
@@ -77,7 +104,7 @@ function Header(props) {
             </div>
           )}
         </Nav>
-      </Navbar>
+      </Navbar> */}
     </>
   );
 }

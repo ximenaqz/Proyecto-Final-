@@ -87,7 +87,7 @@ app.post("/api/register", cifrar_password, function (req, res) {
       password: password_cifrada,
     },
     function (err, datos) {
-      res.send({ mensaje: "registrado" });
+      res.send({ mensaje: "Registrado correctamente" });
     }
   );
 });

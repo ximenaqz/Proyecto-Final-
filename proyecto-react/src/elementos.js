@@ -167,7 +167,7 @@ function Elementos(props) {
         enabled: true,
         position: "topLeft", // topRight, topLeft, bottomRight, bottomLeft
         offsetY: 25,
-        offsetX: 500,
+        offsetX: 400,
       },
     },
     legend: {
@@ -299,18 +299,18 @@ function Elementos(props) {
      
       <>
         {/*Chart es lo que permite pintar la gráfica */}
-        <h3>DATOS AOTECH</h3>
+        {/* <h3>DATOS RECOGIDOS</h3> */}
 
         <div className="grafica-calendar">
-          < Chart options={options} series={series} type="line" width={1200} height={550} />
+          < Chart options={options} series={series} type="line" width={1200} height={650} />
         </div>
 
         {/*Botón para generar el Pdf. */}
         <div className="boton-generarPDF">
-          <button onClick={jsPdfGenerator}> Generate PDF </button>
+          <button onClick={jsPdfGenerator}> Guardar PDF </button>
         </div>
 
-        <h3>DATOS DEL RANGO DE FECHAS SELECCIONADO </h3>
+        <h3>CÁLCULOS DEL RANGO DE FECHAS SELECCIONADO </h3>
 
         {/*Botón para generar el Pdf. */}
 
@@ -320,10 +320,10 @@ function Elementos(props) {
               <h5>Datos de la <strong>Grasa</strong></h5>
             </div>
             <ul>
-              <li>Mínimo % Grasa: {estadistica.resGrasa.min}</li>
-              <li>Máximo % Grasa: {estadistica.resGrasa.max}</li>
-              <li>Media % Grasa: {estadistica.resGrasa.mean}</li>
-              <li>Desviación % Grasa: {estadistica.resGrasa.dsv}
+              <li>Mínimo %: {estadistica.resGrasa.min}</li>
+              <li>Máximo %: {estadistica.resGrasa.max}</li>
+              <li>Media %: {estadistica.resGrasa.mean}</li>
+              <li>Desviación Std: {estadistica.resGrasa.dsv}
               </li>
             </ul>
           </div>
@@ -334,10 +334,10 @@ function Elementos(props) {
               <h5>Datos de la <strong>Proteína</strong></h5>
             </div>
             <ul>
-              <li>Mínimo % Proteína: {estadistica.resProteina.min}</li>
-              <li>Maximo % Proteína: {estadistica.resProteina.max}</li>
-              <li>Media % Proteína: {estadistica.resProteina.mean}</li>
-              <li>Desviación % Proteína: {estadistica.resProteina.dsv}</li>
+              <li>Mínimo %: {estadistica.resProteina.min}</li>
+              <li>Maximo %: {estadistica.resProteina.max}</li>
+              <li>Media %: {estadistica.resProteina.mean}</li>
+              <li>Desviación Std: {estadistica.resProteina.dsv}</li>
             </ul>
           </div>
 
@@ -350,10 +350,10 @@ function Elementos(props) {
               <h5>Datos de la <strong>Lactosa</strong></h5> <div className="color-lactosa"></div>
             </div>
             <ul>
-              <li>Mínimo % Lactosa: {estadistica.resLactosa.min}</li>
-              <li>Máximo % Lactosa: {estadistica.resLactosa.max}</li>
-              <li>Media % Lactosa: {estadistica.resLactosa.mean}</li>
-              <li>Desviación % Lactosa: {estadistica.resLactosa.dsv}</li>
+              <li>Mínimo %: {estadistica.resLactosa.min}</li>
+              <li>Máximo %: {estadistica.resLactosa.max}</li>
+              <li>Media %: {estadistica.resLactosa.mean}</li>
+              <li>Desviación Std: {estadistica.resLactosa.dsv}</li>
             </ul>
           </div>
 
@@ -363,13 +363,12 @@ function Elementos(props) {
               <h5>Datos de la <strong>Temperatura</strong></h5>
             </div>
             <ul>
-              <li>Mínima Temperatura: {estadistica.resTemperatura.min}</li>
-              <li>Máxima Temperatura: {estadistica.resTemperatura.max}</li>
-              <li>Media % Temperatura: {estadistica.resTemperatura.mean}</li>
-              <li>Desviación % Temperatura:{estadistica.resTemperatura.dsv}</li>
+              <li>Temp. Mínima: {estadistica.resTemperatura.min}</li>
+              <li>Temp. Máxima: {estadistica.resTemperatura.max}</li>
+              <li>Temp. Media: {estadistica.resTemperatura.mean}</li>
+              <li>Desviación Std: {estadistica.resTemperatura.dsv}</li>
             </ul>
           </div>
-
         </div>
         <ul>
           {/*mapeadoResultado*/}
