@@ -307,7 +307,7 @@ function Elementos(props) {
 
         {/*Botón para generar el Pdf. */}
         <div className="boton-generarPDF">
-          <button onClick={jsPdfGenerator}> Guardar PDF </button>
+          <button className="fadeIn fourth btn btn-primary" onClick={jsPdfGenerator}> Guardar PDF </button>
         </div>
 
         <h3>CÁLCULOS DEL RANGO DE FECHAS SELECCIONADO </h3>

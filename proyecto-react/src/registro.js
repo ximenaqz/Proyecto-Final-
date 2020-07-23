@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './App.css';
 import { useHistory } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 function Registro() {
@@ -53,7 +54,13 @@ function Registro() {
                 setMensaje(datos.mensaje);
                 console.log(mensaje);
                 history.push("/api/Login");
-                window.alert('Usted se ha registrado correctamente.')
+                // window.alert('Usted se ha registrado correctamente.')
+                Swal.fire({
+                    title: "Usted se ha registrado correctamente.",
+                    // text: "You clicked the button!",
+                    icon: "success",
+                    button: "Aww yiss!",
+                  });
             });
 
 
